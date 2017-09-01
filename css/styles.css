@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.5em;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header one aside" "two three four aside" "five six seven aside"
+}
+header {
+  grid-area: header;
+  outline: 1px solid red;
+}
+aside {
+  grid-area: aside;
+  outline: 1px solid green;
+}
+.one {
+  grid-area: one;
+  outline: 1px solid blue;
+}
+.two {
+  grid-area: two;
+  outline: 1px solid purple;
+}
+.three {
+  grid-area: three;
+  outline: 1px solid orange;
+}
+.four {
+  grid-area: four;
+  outline: 1px solid yellow;
+}
+.five {
+  grid-area: five;
+  outline: 1px solid teal;
+}
+.six {
+  grid-area: six;
+  outline: 1px solid cyan;
+}
+.seven {
+  grid-area: seven;
+  outline: 1px solid magenta;
+}
