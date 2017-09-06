@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-family: 'Arapey', serif;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
@@ -11,37 +12,116 @@ body {
 }
 header {
   grid-area: header;
-  outline: 1px solid red;
+  background: #00A2E0;
 }
 aside {
   grid-area: aside;
-  outline: 1px solid green;
+  background: url(../assets/1996_atlanta-gold-border.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+article {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms ease;
+}
+article:hover {
+  transform: scale(1.1);
+  transition: all 500ms ease;
+}
+
+button{
+  font-size: 0.8em;
+  font-family: 'Arapey', serif;
+  background: transparent;
+  border: solid #000;
+  font-size:
+  height: 50px;
+  width: 100px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin: 5px 5px 5px 10px;
+}
+img {
+  width: 70px;
+  display: inline-block;
+}
+.arrows {
+  border-radius: 50%;
+  margin: auto 40px;
+}
+.arrows:hover {
+  background-color: #B37E2C;
+  transition: 500ms ease;
+
 }
 .one {
   grid-area: one;
-  outline: 1px solid blue;
+  background: #F1623F;
 }
 .two {
   grid-area: two;
-  outline: 1px solid purple;
+  background: #EE2E6B;
 }
 .three {
   grid-area: three;
-  outline: 1px solid orange;
+  background: #005B55;
 }
 .four {
   grid-area: four;
-  outline: 1px solid yellow;
+  background: #00A2E0;
 }
 .five {
   grid-area: five;
-  outline: 1px solid teal;
+  background: #F1623F;
 }
 .six {
   grid-area: six;
-  outline: 1px solid cyan;
+  background: #EE2E6B;
 }
 .seven {
   grid-area: seven;
-  outline: 1px solid magenta;
+  background: #986BAD;
+}
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aside header" "aside header" "one one" "two three" "four five" "four five" "six six" "seven seven";
+  }
+  aside {
+    grid-area: aside;
+    background: url(../assets/izzy.gif) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "aside header" "aside header" "one one" "two three" "four five" "four five" "six six" "seven seven";
+  }
+  aside {
+    grid-area: aside;
+    background: url(../assets/izzy.gif) center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
